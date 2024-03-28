@@ -4,6 +4,17 @@ app_publisher = "service"
 app_description = "Hospitality Operations"
 app_email = "rose.tj44@gmail.com"
 app_license = "mit"
+
+#fixtures=[
+#    {
+#       "doctype":"Role",
+#        "filters":[
+#            ["name","in",["Admin"]]
+#        ]
+#    }
+#]
+
+fixtures = ["Role"]
 # required_apps = []
 
 # Includes in <head>
