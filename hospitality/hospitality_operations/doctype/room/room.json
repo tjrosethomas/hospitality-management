@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:room_number",
+ "creation": "2024-03-28 12:25:23.329928",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_number",
+  "room_type",
+  "room_status",
+  "bed_type",
+  "building_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Room Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room Status",
+   "options": "Available\nBooked",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bed_type",
+   "fieldtype": "Select",
+   "label": "Bed Type",
+   "options": "Manual\nSemi-electric\nFully-electric.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Building Name",
+   "options": "Building",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-28 12:34:12.709088",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
