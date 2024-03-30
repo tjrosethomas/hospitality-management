@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:bed_type_name",
+ "creation": "2024-03-30 10:34:17.395462",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bed_type_name",
+  "description",
+  "capacity",
+  "additional_cost",
+  "availability_status",
+  "room",
+  "room_bed_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "bed_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bed Type ",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity "
+  },
+  {
+   "fieldname": "additional_cost",
+   "fieldtype": "Int",
+   "label": "Additional Cost"
+  },
+  {
+   "fieldname": "availability_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Availability Status ",
+   "options": "Available\nBooked"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Room"
+  },
+  {
+   "fetch_from": "room.bed_type",
+   "fieldname": "room_bed_type",
+   "fieldtype": "Data",
+   "label": "Room Bed Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-30 11:22:44.640280",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Bed Type",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
