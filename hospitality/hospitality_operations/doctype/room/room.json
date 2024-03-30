@@ -41,9 +41,9 @@
   },
   {
    "fieldname": "bed_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Bed Type",
-   "options": "Manual\nSemi-electric\nFully-electric.",
+   "options": "Bed Type",
    "reqd": 1
   },
   {
@@ -67,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 10:02:29.919789",
+ "modified": "2024-03-30 11:11:39.026599",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Room",
