@@ -10,13 +10,16 @@
   "room_type",
   "room_status",
   "bed_type",
-  "building_name"
+  "building_name",
+  "door_status",
+  "smoking_preference"
  ],
  "fields": [
   {
    "fieldname": "room_number",
    "fieldtype": "Int",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Room Number",
    "reqd": 1,
    "unique": 1
@@ -50,11 +53,21 @@
    "label": "Building Name",
    "options": "Building",
    "reqd": 1
+  },
+  {
+   "fieldname": "door_status",
+   "fieldtype": "Data",
+   "label": "Door Status"
+  },
+  {
+   "fieldname": "smoking_preference",
+   "fieldtype": "Data",
+   "label": "Smoking Preference"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 12:34:12.709088",
+ "modified": "2024-03-30 10:02:29.919789",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Room",
