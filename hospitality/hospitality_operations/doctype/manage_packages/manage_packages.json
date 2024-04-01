@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:package_name",
+ "creation": "2024-04-01 21:46:40.997871",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "package_name",
+  "number_of_days",
+  "description",
+  "included_services",
+  "package_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "package_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Package Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "number_of_days",
+   "fieldtype": "Int",
+   "label": "Number of Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "included_services",
+   "fieldtype": "Link",
+   "label": "Included Services",
+   "options": "Services",
+   "reqd": 1
+  },
+  {
+   "fieldname": "package_price",
+   "fieldtype": "Currency",
+   "label": "Package Price ",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-01 21:54:52.366931",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Manage Packages",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Front Desk Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

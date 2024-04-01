@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:service_name",
+ "creation": "2024-04-01 21:51:44.477417",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_name",
+  "service_description",
+  "service_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Small Text",
+   "label": "Service Description"
+  },
+  {
+   "fieldname": "service_price",
+   "fieldtype": "Currency",
+   "label": "Service Price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-01 21:52:55.371954",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Services",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
