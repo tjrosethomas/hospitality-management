@@ -1,28 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:bed_type_name",
- "creation": "2024-03-30 10:34:17.395462",
+ "autoname": "field:room_type",
+ "creation": "2024-03-30 14:48:50.417168",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "bed_type_name",
+  "room_type",
+  "room_type_name",
   "description",
   "capacity",
-  "additional_cost",
-  "availability_status",
+  "amenities",
+  "rate",
   "room",
-  "room_bed_type"
+  "room_status",
+  "bed_type",
+  "bed_type_name"
  ],
  "fields": [
   {
-   "fieldname": "bed_type_name",
+   "fieldname": "room_type",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Bed Type Name",
-   "reqd": 1,
-   "set_only_once": 1,
+   "label": "Room Type",
    "unique": 1
+  },
+  {
+   "fieldname": "room_type_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room Type Name",
+   "options": "Private Rooms\nGeneral Wards\nSurgical Wards",
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "description",
@@ -32,40 +41,50 @@
   {
    "fieldname": "capacity",
    "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Capacity "
+   "label": "Capacity"
   },
   {
-   "fieldname": "additional_cost",
+   "fieldname": "amenities",
+   "fieldtype": "Link",
+   "label": "Amenities",
+   "options": "Amenity"
+  },
+  {
+   "fieldname": "rate",
    "fieldtype": "Int",
-   "label": "Additional Cost"
-  },
-  {
-   "fieldname": "availability_status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Availability Status ",
-   "options": "Available\nBooked"
+   "label": "Rate"
   },
   {
    "fieldname": "room",
    "fieldtype": "Link",
-   "label": "Room",
+   "label": "Room Number",
    "options": "Room"
   },
   {
-   "fetch_from": "room.bed_type",
-   "fieldname": "room_bed_type",
+   "fetch_from": "room.room_status",
+   "fieldname": "room_status",
    "fieldtype": "Data",
-   "label": "Room Bed Type"
+   "label": "Room Status"
+  },
+  {
+   "fieldname": "bed_type",
+   "fieldtype": "Link",
+   "label": "Bed Type",
+   "options": "Bed Type"
+  },
+  {
+   "fetch_from": "bed_type.bed_type_name",
+   "fieldname": "bed_type_name",
+   "fieldtype": "Data",
+   "label": "Bed Type Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 15:02:56.817918",
+ "modified": "2024-03-30 15:16:48.626862",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
- "name": "Bed Type",
+ "name": "Room Type",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
