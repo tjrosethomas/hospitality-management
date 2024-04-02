@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:first_name",
+ "creation": "2024-04-02 14:20:55.490317",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "guest_individual_details_section",
+  "first_name",
+  "last_name",
+  "phone_number",
+  "email",
+  "nationality",
+  "proof_of_identity"
+ ],
+ "fields": [
+  {
+   "fieldname": "guest_individual_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guest Individual Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number "
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email "
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Select",
+   "label": "Nationality ",
+   "options": "Indian\nOther"
+  },
+  {
+   "fieldname": "proof_of_identity",
+   "fieldtype": "Attach",
+   "label": "Proof of Identity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-02 17:42:49.490990",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Guest Detail",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

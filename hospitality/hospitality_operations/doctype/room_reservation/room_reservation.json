@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:selected_room",
+ "creation": "2024-04-02 13:27:57.144374",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation_details_section",
+  "status",
+  "expected_check_in_date",
+  "expected_check_out_date",
+  "selected_room",
+  "room_rate",
+  "selected_packages",
+  "column_break_vfvh",
+  "actual_check_in_time",
+  "actual_check_out_time",
+  "select_jxqo",
+  "agency_name",
+  "description",
+  "billing_details_section",
+  "email_column",
+  "name1",
+  "email",
+  "phone_number",
+  "address",
+  "guest_individual_details_section",
+  "pax_information"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Block\nReserve\nCheck-In\nCheck-Out"
+  },
+  {
+   "fieldname": "expected_check_in_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Check In Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_check_out_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Check Out Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "selected_room",
+   "fieldtype": "Link",
+   "label": "Selected Room",
+   "options": "Room",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_vfvh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_check_in_time",
+   "fieldtype": "Time",
+   "label": "Actual Check In Time"
+  },
+  {
+   "fieldname": "actual_check_out_time",
+   "fieldtype": "Time",
+   "label": "Actual Check Out time"
+  },
+  {
+   "fieldname": "select_jxqo",
+   "fieldtype": "Select",
+   "label": "Admission Channel",
+   "options": "Walk-In\nAgency"
+  },
+  {
+   "fieldname": "room_rate",
+   "fieldtype": "Link",
+   "label": "Room Rate",
+   "options": "Room Rate"
+  },
+  {
+   "fieldname": "selected_packages",
+   "fieldtype": "Link",
+   "label": "Selected Packages",
+   "options": "Manage Packages"
+  },
+  {
+   "fieldname": "agency_name",
+   "fieldtype": "Link",
+   "label": "Agency Name",
+   "options": "Travel Agency"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "guest_individual_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guest Individual Details"
+  },
+  {
+   "fieldname": "pax_information",
+   "fieldtype": "Table",
+   "label": "Pax Information",
+   "options": "Guest Detail"
+  },
+  {
+   "fieldname": "billing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_column",
+   "fieldtype": "Column Break",
+   "label": "Email"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-02 17:13:10.639760",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Room Reservation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Front Desk Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
