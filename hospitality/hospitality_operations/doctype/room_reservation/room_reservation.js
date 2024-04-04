@@ -53,52 +53,53 @@
 
 
 
-frappe.ui.form.on('Room Reservation', {
-    refresh: function(frm) {
-        toggle_fields_based_on_status(frm);
-    },
-    status: function(frm) {
-        toggle_fields_based_on_status(frm);
-    },
-    onload: function(frm) {
-        // Set default values only if the fields are empty
-        if (!frm.doc.actual_check_in_time) {
-            frm.set_value('actual_check_in_time', '12:00');
-        }
-        if (!frm.doc.actual_check_out_time) {
-            frm.set_value('actual_check_out_time', '14:00');
-        }
-    }
-});
+// frappe.ui.form.on('Room Reservation', {
+//     refresh: function(frm) {
+//         toggle_fields_based_on_status(frm);
+//     },
+//     status: function(frm) {
+//         toggle_fields_based_on_status(frm);
+//     },
+//     onload: function(frm) {
+//         // Set default values only if the fields are empty
+//         if (!frm.doc.actual_check_in_time) {
+//             frm.set_value('actual_check_in_time', '12:00');
+//         }
+//         if (!frm.doc.actual_check_out_time) {
+//             frm.set_value('actual_check_out_time', '14:00');
+//         }
+//     }
+// });
 
-function toggle_fields_based_on_status(frm) {
-    // Decide which fields to show or hide based on status
-    let fieldsToShow = [];
-    let fieldsToHide = ['actual_check_in_time', 'actual_check_out_time', 'agency_name', 'room_rate', 'selected_room', 'expected_check_in_date', 'expected_check_out_date'];
+// function toggle_fields_based_on_status(frm) {
+//     // Decide which fields to show or hide based on status
+//     let fieldsToShow = [];
+//     let fieldsToHide = ['actual_check_in_time', 'actual_check_out_time', 'agency_name', 'room_rate', 'selected_room', 'expected_check_in_date', 'expected_check_out_date'];
 
-    switch (frm.doc.status) {
-        case 'Block':
-            fieldsToShow = ['expected_check_in_date', 'expected_check_out_date', 'selected_room'];
-            break;
-        case 'Reserve':
-            fieldsToShow = ['agency_name','room_rate', 'selected_room', 'expected_check_in_date', 'expected_check_out_date'];
-            break;
-        case 'Check-In':
-            fieldsToShow = ['actual_check_in_time']; // Include other fields as needed
-            break;
-        case 'Check-Out':
-            fieldsToShow = ['actual_check_out_time']; // Include other fields as needed
-            break;
-        // Handle other statuses if necessary
-    }
+//     switch (frm.doc.status) {
+//         case 'Block':
+//             fieldsToShow = ['expected_check_in_date', 'expected_check_out_date', 'selected_room'];
+//             break;
+//         case 'Reserve':
+//             fieldsToShow = ['agency_name','room_rate', 'selected_room', 'expected_check_in_date', 'expected_check_out_date'];
+//             break;
+//         case 'Check-In':
+//             fieldsToShow = ['actual_check_in_time']; // Include other fields as needed
+//             break;
+//         case 'Check-Out':
+//             fieldsToShow = ['actual_check_out_time']; // Include other fields as needed
+//             break;
+//         // Handle other statuses if necessary
+//     }
 
-    // Hide all fields initially
-    fieldsToHide.forEach(function(field) {
-        frm.set_df_property(field, 'hidden', true);
-    });
+//     // Hide all fields initially
+//     fieldsToHide.forEach(function(field) {
+//         frm.set_df_property(field, 'hidden', true);
+//     });
 
-    // Show the fields required for the current status
-    fieldsToShow.forEach(function(field) {
-        frm.set_df_property(field, 'hidden', false);
-    });
-}
+//     // Show the fields required for the current status
+//     fieldsToShow.forEach(function(field) {
+//         frm.set_df_property(field, 'hidden', false);
+//     });
+// }
+
