@@ -29,7 +29,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Room Type Name",
-   "options": "Private Rooms\nGeneral Wards\nSurgical Wards",
+   "options": "Single Rooms\nDouble Room\nStandard Room",
    "reqd": 1,
    "set_only_once": 1
   },
@@ -81,7 +81,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 15:16:48.626862",
+ "modified": "2024-04-02 12:58:55.143185",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Room Type",
