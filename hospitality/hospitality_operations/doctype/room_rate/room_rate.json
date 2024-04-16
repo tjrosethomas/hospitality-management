@@ -23,7 +23,7 @@
   },
   {
    "fieldname": "rate",
-   "fieldtype": "Currency",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Rate",
    "reqd": 1
@@ -38,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-01 20:44:41.461913",
+ "modified": "2024-04-09 13:49:40.357635",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Room Rate",

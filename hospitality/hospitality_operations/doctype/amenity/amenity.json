@@ -30,7 +30,7 @@
    "fieldname": "room",
    "fieldtype": "Link",
    "label": "Room",
-   "options": "Room"
+   "options": "Manage Room"
   },
   {
    "fetch_from": "room.room_status",
@@ -41,7 +41,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 10:16:45.030972",
+ "modified": "2024-04-09 10:15:11.246772",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Amenity",

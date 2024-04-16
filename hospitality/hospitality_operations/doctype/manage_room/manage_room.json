@@ -11,30 +11,33 @@
   "room_status",
   "bed_type",
   "building",
+  "door_status",
+  "smoking_preferences",
   "amenities",
-  "remark"
+  "remark",
+  "section_break_wjwj",
+  "room_status_history"
  ],
  "fields": [
   {
    "fieldname": "room_number",
-   "fieldtype": "Link",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Room Number",
-   "options": "Room",
    "reqd": 1,
-   "set_only_once": 1,
    "unique": 1
   },
   {
    "fetch_from": "room_number.room_type",
    "fieldname": "room_type",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Room Type",
+   "options": "Room Type",
    "reqd": 1
   },
   {
-   "fetch_from": "room_number.room_status",
+   "fetch_from": "room_type.room_status",
    "fieldname": "room_status",
    "fieldtype": "Data",
    "label": "Room Status ",
@@ -43,16 +46,16 @@
   {
    "fetch_from": "room_number.bed_type",
    "fieldname": "bed_type",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Bed Type",
+   "options": "Bed Type",
    "reqd": 1
   },
   {
-   "fetch_from": "room_number.building_name",
+   "fetch_from": ".",
    "fieldname": "building",
    "fieldtype": "Data",
-   "label": "Building",
-   "reqd": 1
+   "label": "Building Name"
   },
   {
    "fieldname": "amenities",
@@ -64,11 +67,31 @@
    "fieldname": "remark",
    "fieldtype": "Small Text",
    "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_wjwj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_status_history",
+   "fieldtype": "Table",
+   "label": "Room Status ",
+   "options": "Room History"
+  },
+  {
+   "fieldname": "door_status",
+   "fieldtype": "Data",
+   "label": "Door Status"
+  },
+  {
+   "fieldname": "smoking_preferences",
+   "fieldtype": "Data",
+   "label": "Smoking Preferences"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-01 21:10:07.766619",
+ "modified": "2024-04-16 13:26:52.332781",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Manage Room",
@@ -96,6 +119,18 @@
    "read": 1,
    "report": 1,
    "role": "Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Front Desk Manager",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BK-{expected_check_in_date}-{selected_room}",
+ "creation": "2024-04-09 10:16:15.377049",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation_details_section",
+  "status",
+  "expected_check_in_date",
+  "expected_check_out_date",
+  "selected_room",
+  "room_type",
+  "selected_packages",
+  "column_break_wygf",
+  "actual_check_in_time",
+  "actual_check_out_time",
+  "admission_channel",
+  "agency_name",
+  "description",
+  "billing_details_section",
+  "name1",
+  "email",
+  "phone_number",
+  "address",
+  "guest_individual_details_section",
+  "pax_information"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Block\nReserve\nCheck-In\nCheck-Out"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Block' || doc.status == 'Reserve'|| doc.status=='Check-In'",
+   "fieldname": "expected_check_in_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Check In Date"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Block' || doc.status == 'Reserve'|| doc.status == 'Check-Out'",
+   "fieldname": "expected_check_out_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Check Out Date"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Block' || doc.status == 'Reserve'|| doc.status == 'Check-In'|| doc.status == 'Check-In'|| doc.status == 'Check-In'|| doc.status == 'Check-Out'",
+   "fieldname": "selected_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Selected Room",
+   "options": "Manage Room"
+  },
+  {
+   "depends_on": "eval: doc.status=='Block'|| doc.status == 'Reserve' || doc.status == 'Check-In' ||doc.status == 'Check-Out'",
+   "fetch_from": "selected_room.room_type",
+   "fieldname": "room_type",
+   "fieldtype": "Data",
+   "label": "Room Type"
+  },
+  {
+   "depends_on": "eval:doc.status =='Reserve'|| doc.status == 'Check-In' || doc.status =='Check-Out'",
+   "fieldname": "selected_packages",
+   "fieldtype": "Link",
+   "label": "Selected Packages",
+   "options": "Manage Packages"
+  },
+  {
+   "fieldname": "column_break_wygf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Check-In';",
+   "fieldname": "actual_check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Actual Check In Time"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Check-Out';",
+   "fieldname": "actual_check_out_time",
+   "fieldtype": "Datetime",
+   "label": "Actual Check Out time"
+  },
+  {
+   "default": "Agency",
+   "depends_on": "eval:doc.status == 'Block' || doc.status == 'Reserve'||doc.status=='Check-In'",
+   "fieldname": "admission_channel",
+   "fieldtype": "Select",
+   "label": "Admission Channel",
+   "options": "Walk-In\nAgency"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Block' || doc.status == 'Reserve'||doc.status=='Check-In'",
+   "fieldname": "agency_name",
+   "fieldtype": "Link",
+   "label": "Agency Name",
+   "options": "Travel Agency"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserve';",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserve'||doc.status=='Check-In'",
+   "fieldname": "billing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval:doc.status == 'Reserve'"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "mandatory_depends_on": "eval:doc.status == 'Reserve'"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "mandatory_depends_on": "eval:doc.status == 'Reserve'"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "mandatory_depends_on": "eval:doc.status == 'Reserve'"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Reserve'|| doc.status=='Check-In'||doc.status=='Check-Out'|| doc.status == 'Check-Out'",
+   "fieldname": "guest_individual_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guest Individual Details"
+  },
+  {
+   "fieldname": "pax_information",
+   "fieldtype": "Table",
+   "label": "Pax Information",
+   "mandatory_depends_on": "eval:doc.status == 'Reserve'|| doc.status == 'Check-In'",
+   "options": "Guest Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-16 13:08:40.764286",
+ "modified_by": "Administrator",
+ "module": "Hospitality Operations",
+ "name": "Reservation Room",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

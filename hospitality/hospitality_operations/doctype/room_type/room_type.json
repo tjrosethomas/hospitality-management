@@ -58,7 +58,7 @@
    "fieldname": "room",
    "fieldtype": "Link",
    "label": "Room Number",
-   "options": "Room"
+   "options": "Manage Room"
   },
   {
    "fetch_from": "room.room_status",
@@ -81,7 +81,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-02 12:58:55.143185",
+ "modified": "2024-04-09 10:14:23.578561",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Room Type",
