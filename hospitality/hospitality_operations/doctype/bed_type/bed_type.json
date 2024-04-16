@@ -51,7 +51,7 @@
    "fieldname": "room",
    "fieldtype": "Link",
    "label": "Room",
-   "options": "Room"
+   "options": "Manage Room"
   },
   {
    "fetch_from": "room.bed_type",
@@ -62,7 +62,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-02 12:42:22.450113",
+ "modified": "2024-04-09 10:12:51.154307",
  "modified_by": "Administrator",
  "module": "Hospitality Operations",
  "name": "Bed Type",
